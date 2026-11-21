@@ -4,30 +4,47 @@ A complete, digitized, and structured repository of the canonical Vedic predicti
 
 ---
 
-## 🚀 इंटरैक्टिव वेब ऐप्लिकेशन (Interactive Web Application Dashboard)
+## 🌐 लाइव ऑनलाइन वेब पोर्टल (Live Web Portal — GitHub Pages)
 
-भीम (Bhim) की जन्मकुंडली, ग्रहों के बल, योगों, और भावी जीवनसंगिनी के 160-सूत्रीय महा-प्रोफ़ाइल का एक आधुनिक, लक्ज़री कॉस्मिक थीम वाला वेब पोर्टल तैयार किया गया है:
+भीम (Bhim) की जन्मकुंडली, ग्रहों के बल, योगों, और भावी जीवनसंगिनी के 500-सूत्रीय महा-ज्ञानकोश का एक आधुनिक, लक्ज़री कॉस्मिक थीम वाला वेब पोर्टल लाइव पब्लिश किया गया है:
 
-* 💻 **लोकल लाइव यूआरएल**: `http://localhost:8080` (लोकल बैकग्राउंड सर्वर पर सक्रिय)
-* 📁 **गिटहब वेबएप कोड**: [webapp/index.html](https://github.com/anshuk-dev/astroapp-prediction-rag/blob/main/webapp/index.html) व [webapp/app.js](https://github.com/anshuk-dev/astroapp-prediction-rag/blob/main/webapp/app.js)
+* 🚀 **लाइव ऑनलाइन एक्सेसिबल यूआरएल (GitHub Pages)**: [https://anshuk-dev.github.io/bhim-astro-portal/](https://anshuk-dev.github.io/bhim-astro-portal/)
+* 💻 **लोकल लाइव यूआरएल**: `http://localhost:8080` (लोकल बैकग्राउंड सर्वर)
 
-### वेब ऐप्लिकेशन में शामिल 4 प्रमुख अनुभाग (Key Modules):
-1. **📊 कुंडली चक्र व योग (Kundli Dashboard)**: वृश्चिक लग्न, दशमस्थ स्वग्रही सूर्य (मेष D9 उच्च) का बुधादित्य योग, चतुर्थ में वर्गोत्तम शनि का शश महापुरुष योग, एवं एकादश में शुक्र का नीचभंग राजयोग।
-2. **🔬 सूक्ष्म मनोवैज्ञानिक एवं व्यावहारिक परीक्षण (Nuance-Level Profiling)**: भावी जीवनसंगिनी के 10 सूक्ष्म आयाम—पारिवारिक संस्कार, बौद्धिक स्तर, दैनिक टेबल मैनर्स, शौक, पसंद-नापसंद, आंतरिक अनकहे घाव (Trauma), आध्यात्मिक दृष्टि एवं विकासोन्मुखी सोच (Growth Mindset)।
-3. **👰 160-सूत्रीय महा-प्रोफ़ाइल (Full 160 Master Points)**: 8 प्रमुख खंडों में प्रत्येक के 20-20 विस्तृत बिंदु, शास्त्रीय श्लोक संदर्भ, एवं लाइव सर्च/फ़िल्टरिंग।
-4. **⏰ विवाह का स्वर्णिम कालखंड (Golden Marriage Timing Window)**: 2026 के अंत से आरंभ, और नवंबर 2027 से मध्य 2028 का सर्वोत्कृष्ट परिणय कालखंड।
+### 📖 भावी जीवनसंगिनी 25,000-वाक्य महा-ज्ञानकोश (25,000 Sentences Master Encyclopedia)
+* **500 विशिष्ट गुण × प्रत्येक के 50 विस्तृत भविष्यसूचक वाक्य = 25,000 वाक्य**
+* **प्रत्यक्ष सूची (Direct Listing)**: सर्च बार पर निर्भरता समाप्त कर सभी 500 गुण और उनके प्रत्येक 50-50 वाक्य 20 खंडों में सीधे पढ़ने योग्य बनाए गए हैं।
+* **20 स्वतंत्र खंड**: प्रत्येक खंड में 25 बिंदु (1,250 वाक्य) शामिल हैं।
 
 ---
 
-## 🌟 लाइव ऑनलाइन रिपोर्ट्स (Live Astrology Reports — Click to Read Online)
+## 📚 ऑनलाइन पढ़ने हेतु महा-ज्ञानकोश फाइल्स (Click to Read Online on GitHub)
 
-आप सीधे GitHub वेब इंटरफ़ेस पर एक क्लिक में संपूर्ण प्रतिवेदन ऑनलाइन पढ़ सकते हैं:
+1. 📖 **[भावी जीवनसंगिनी का 25,000-वाक्य महा-ज्ञानकोश (Master 25,000 Sentences Encyclopedia)](reports/bhim_future_wife_25000_sentences_master_encyclopedia.md)** — *(संपूर्ण 500 गुण × 50 वाक्य, 8.4 MB)*
+2. 📂 **[20 अलग-अलग खंड फाइल्स (Directory of 20 Volumes — 1,250 Sentences Each)](reports/encyclopedia_500_x_50/)**:
+   - [खंड 01: शारीरिक सौंदर्य व मुखमंडल (बिंदु 1-25)](reports/encyclopedia_500_x_50/Volume_01_Points_001_to_025.md)
+   - [खंड 02: शारीरिक भाषा व चाल-ढाल (बिंदु 26-50)](reports/encyclopedia_500_x_50/Volume_02_Points_026_to_050.md)
+   - [खंड 03: परिधान सुरुचि व स्वच्छता (बिंदु 51-75)](reports/encyclopedia_500_x_50/Volume_03_Points_051_to_075.md)
+   - [खंड 04: वाणी व संवाद-शैली (बिंदु 76-100)](reports/encyclopedia_500_x_50/Volume_04_Points_076_to_100.md)
+   - [खंड 05: बौद्धिक प्रखरता व तर्क (बिंदु 101-125)](reports/encyclopedia_500_x_50/Volume_05_Points_101_to_125.md)
+   - [खंड 06: शिक्षा व कौशल (बिंदु 126-150)](reports/encyclopedia_500_x_50/Volume_06_Points_126_to_150.md)
+   - [खंड 07: करियर निष्ठा (बिंदु 151-175)](reports/encyclopedia_500_x_50/Volume_07_Points_151_to_175.md)
+   - [खंड 08: पारिवारिक पृष्ठभूमि व संस्कार (बिंदु 176-200)](reports/encyclopedia_500_x_50/Volume_08_Points_176_to_200.md)
+   - [खंड 09: दैनिक दिनचर्या व अनुशासन (बिंदु 201-225)](reports/encyclopedia_500_x_50/Volume_09_Points_201_to_225.md)
+   - [खंड 10: खान-पान व पाक-कला (बिंदु 226-250)](reports/encyclopedia_500_x_50/Volume_10_Points_226_to_250.md)
+   - [खंड 11: गृह व्यवस्था व वास्तु (बिंदु 251-275)](reports/encyclopedia_500_x_50/Volume_11_Points_251_to_275.md)
+   - [खंड 12: वित्तीय प्रज्ञता व बचत (बिंदु 276-300)](reports/encyclopedia_500_x_50/Volume_12_Points_276_to_300.md)
+   - [खंड 13: शौक व कलात्मक अभिरुचि (बिंदु 301-325)](reports/encyclopedia_500_x_50/Volume_13_Points_301_to_325.md)
+   - [खंड 14: सामाजिक दायरा व मर्यादा (बिंदु 326-350)](reports/encyclopedia_500_x_50/Volume_14_Points_326_to_350.md)
+   - [खंड 15: पसंद-नापसंद व सीमाएं (बिंदु 351-375)](reports/encyclopedia_500_x_50/Volume_15_Points_351_to_375.md)
+   - [खंड 16: संवेदनशीलता व मनःस्थिति (बिंदु 376-400)](reports/encyclopedia_500_x_50/Volume_16_Points_376_to_400.md)
+   - [खंड 17: आंतरिक घाव व ट्रॉमा रिस्पॉन्स (बिंदु 401-425)](reports/encyclopedia_500_x_50/Volume_17_Points_401_to_425.md)
+   - [खंड 18: आध्यात्मिक चेतना व साधना (बिंदु 426-450)](reports/encyclopedia_500_x_50/Volume_18_Points_426_to_450.md)
+   - [खंड 19: दांपत्य प्रेम व समर्पण (बिंदु 451-475)](reports/encyclopedia_500_x_50/Volume_19_Points_451_to_475.md)
+   - [खंड 20: संतान लालन-पालन व कुल-विरासत (बिंदु 476-500)](reports/encyclopedia_500_x_50/Volume_20_Points_476_to_500.md)
 
-* 👰 **[भीम (Bhim) — भावी जीवनसंगिनी, वैवाहिक मनोविज्ञान एवं संपूर्ण पारिवारिक जीवन का 160-सूत्रीय वृहद् महा-प्रतिवेदन](https://github.com/anshuk-dev/astroapp-prediction-rag/blob/main/reports/bhim_future_wife_and_relationship_profile.md)**  
-  *(शारीरिक बनावट, मानसिक सोच, सामाजिक प्रतिष्ठा, संस्कार, दांपत्य प्रेम, संतान लालन-पालन, वित्तीय प्रबंधन एवं विवाद समाधान के 160 विस्तृत बिंदु व शास्त्रीय प्रमाण)*
-
-* 📊 **[भीम (Bhim) — संपूर्ण विस्तृत जन्मकुंडली फलित विश्लेषण प्रतिवेदन](https://github.com/anshuk-dev/astroapp-prediction-rag/blob/main/reports/bhim_horoscope_prediction_report.md)**  
-  *(दशमस्थ स्वग्रही सूर्य + बुधादित्य योग, शश महापुरुष योग, नीचभंग राजयोग, वर्तमान चंद्र-शनि अंतर्दशा एवं शास्त्रीय उपाय)*
+3. 👰 **[भीम — भावी जीवनसंगिनी 160-सूत्रीय वृहद् महा-प्रतिवेदन](reports/bhim_future_wife_and_relationship_profile.md)**
+4. 📊 **[भीम — संपूर्ण विस्तृत जन्मकुंडली फलित विश्लेषण प्रतिवेदन](reports/bhim_horoscope_prediction_report.md)**
 
 ---
 

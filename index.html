@@ -93,11 +93,11 @@
                 <button onclick="switchTab('nuances')" id="btn-nuances" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     🔬 सूक्ष्म आयाम (10 Dimensions)
                 </button>
-                <button onclick="switchTab('profile160')" id="btn-profile160" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
-                    👰 500-सूत्रीय महा-प्रोफ़ाइल (500 Qualities)
-                </button>
                 <button onclick="switchTab('encyclopedia')" id="btn-encyclopedia" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
-                    📚 1,000-वाक्य महा-ज्ञानकोश (20×50)
+                    📖 25,000-वाक्य महा-ज्ञानकोश (500 गुण × 50 वाक्य)
+                </button>
+                <button onclick="switchTab('profile160')" id="btn-profile160" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
+                    👰 500 गुणों की प्रत्यक्ष सूची
                 </button>
                 <button onclick="switchTab('timing')" id="btn-timing" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     ⏰ विवाह कालखंड (2027-28)
@@ -332,51 +332,70 @@
             </div>
         </section>
 
-        <!-- ================= TAB 3: 500-POINT PREDICTIVE PROFILE ================= -->
+        <!-- ================= TAB: 25,000-SENTENCE ENCYCLOPEDIA (500 POINTS x 50 SENTENCES) ================= -->
+        <section id="tab-encyclopedia" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-500/20 text-gold-400 border border-gold-500/30">
+                            📖 25,000-वाक्य महा-ज्ञानकोश
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                            500 गुण × 50 वाक्य = 25,000 वाक्य
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                            20 खंड प्रत्यक्ष सूचीबद्ध
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-cinzel text-white gold-gradient-text mt-2">
+                        भावी जीवनसंगिनी 25,000-वाक्य महा-ज्ञानकोश (Complete 25,000 Sentences)
+                    </h2>
+                    <p class="text-xs text-slate-300 font-hindi mt-1">
+                        सर्च बार के बजाय प्रत्येक गुण सीधे सूचीबद्ध है। नीचे 20 खंडों के बटन दिए गए हैं — किसी भी खंड पर क्लिक करें और उसके 25 गुणों के सभी 50-50 भविष्यसूचक वाक्य (1,250 वाक्य प्रति खंड) सीधे पढ़ें।
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                    <span class="px-4 py-2 rounded-xl bg-cosmic-800 border border-gold-500/30 text-xs font-bold text-gold-400 font-cinzel">
+                        ✓ कुल 25,000 वाक्य
+                    </span>
+                </div>
+            </div>
+
+            <!-- Volume Navigation Pills -->
+            <div class="glass-card rounded-2xl p-4">
+                <div class="flex items-center justify-between pb-2 mb-2 border-b border-gold-500/20">
+                    <span class="text-xs font-bold text-amber-400 font-hindi">
+                        खंड चुनें (20 जीवन खंड — प्रत्येक में 25 बिंदु = 1,250 वाक्य):
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-hindi">स्क्रोल या स्वाइप करें →</span>
+                </div>
+                <div id="volume-pills-container" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin"></div>
+            </div>
+
+            <!-- Dynamic Volume Content Listing -->
+            <div id="volume-content-display" class="space-y-6"></div>
+        </section>
+
+        <!-- ================= TAB: 500-POINT DIRECT LIST ================= -->
         <section id="tab-profile160" class="tab-content hidden space-y-6">
             <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                     <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text">
-                        भावी जीवनसंगिनी की 500 सूक्ष्म विशेषताएं एवं गुण (Full 500 Predicted Qualities)
+                        भावी जीवनसंगिनी के 500 गुण — संपूर्ण प्रत्यक्ष सूची
                     </h2>
-                    <p class="text-xs text-slate-400 font-hindi mt-1">20 प्रमुख जीवन खंडों में प्रत्येक के 25-25 सूक्ष्म भविष्यसूचक गुण, स्वभाव एवं शास्त्रीय फलित</p>
-                    <span id="search-count" class="hidden text-xs text-amber-400 font-bold mt-1 inline-block"></span>
+                    <p class="text-xs text-slate-300 font-hindi mt-1">
+                        सर्च के बिना 20 प्रमुख जीवन खंडों में प्रत्येक के 25-25 गुण सीधे एक-एक करके क्रमवार सूचीबद्ध हैं।
+                    </p>
                 </div>
-                <div class="w-full md:w-80">
-                    <input type="text" id="search160" onkeyup="filter160Points()" placeholder="🔍 500 गुणों में खोजें (उदा: मुस्कान, क्रोध, खर्च, सौंदर्य)..." class="w-full px-4 py-2.5 rounded-xl bg-cosmic-800 border border-gold-500/30 text-sm text-white focus:outline-none focus:border-gold-400">
+                <div class="shrink-0">
+                    <span class="px-3.5 py-2 rounded-xl bg-cosmic-800 border border-gold-500/30 text-xs font-bold text-emerald-400 font-cinzel">
+                        ✓ 500 / 500 गुण सूचीबद्ध
+                    </span>
                 </div>
             </div>
 
             <div id="points-container" class="space-y-4">
-                <!-- Dynamically loaded or fully listed cards via app.js -->
-            </div>
-        </section>
-
-        <!-- ================= TAB: 1,000-SENTENCE ENCYCLOPEDIA ================= -->
-        <section id="tab-encyclopedia" class="tab-content hidden space-y-6">
-            <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                    <div class="flex items-center gap-2">
-                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-500/20 text-gold-400 border border-gold-500/30">
-                            📚 महा-ज्ञानकोश
-                        </span>
-                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                            20 स्तंभ × 50 वाक्य = 1,000 वाक्य
-                        </span>
-                    </div>
-                    <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text mt-2">
-                        भावी जीवनसंगिनी का 1,000-वाक्य महा-ज्ञानकोश
-                    </h2>
-                    <p class="text-xs text-slate-400 font-hindi mt-1">प्रत्येक प्रमुख जीवन-स्तंभ में 50 अत्यंत विस्तृत, सूक्ष्म एवं प्रमाणिक भविष्यसूचक वाक्य</p>
-                    <span id="encyclopedia-search-count" class="hidden text-xs text-amber-400 font-bold mt-1 inline-block"></span>
-                </div>
-                <div class="w-full md:w-80">
-                    <input type="text" id="search-encyclopedia" onkeyup="filterEncyclopedia()" placeholder="🔍 1,000 वाक्यों में खोजें (उदा: मुस्कान, बजट, क्रोध, चाय)..." class="w-full px-4 py-2.5 rounded-xl bg-cosmic-800 border border-gold-500/30 text-sm text-white focus:outline-none focus:border-gold-400">
-                </div>
-            </div>
-
-            <div id="encyclopedia-container" class="space-y-6">
-                <!-- Dynamically loaded with all 1,000 sentences via app.js -->
+                <!-- Dynamically loaded directly via app.js -->
             </div>
         </section>
 
