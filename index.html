@@ -96,6 +96,9 @@
                 <button onclick="switchTab('profile160')" id="btn-profile160" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     👰 500-सूत्रीय महा-प्रोफ़ाइल (500 Qualities)
                 </button>
+                <button onclick="switchTab('encyclopedia')" id="btn-encyclopedia" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
+                    📚 1,000-वाक्य महा-ज्ञानकोश (20×50)
+                </button>
                 <button onclick="switchTab('timing')" id="btn-timing" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     ⏰ विवाह कालखंड (2027-28)
                 </button>
@@ -346,6 +349,34 @@
 
             <div id="points-container" class="space-y-4">
                 <!-- Dynamically loaded or fully listed cards via app.js -->
+            </div>
+        </section>
+
+        <!-- ================= TAB: 1,000-SENTENCE ENCYCLOPEDIA ================= -->
+        <section id="tab-encyclopedia" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-500/20 text-gold-400 border border-gold-500/30">
+                            📚 महा-ज्ञानकोश
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                            20 स्तंभ × 50 वाक्य = 1,000 वाक्य
+                        </span>
+                    </div>
+                    <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text mt-2">
+                        भावी जीवनसंगिनी का 1,000-वाक्य महा-ज्ञानकोश
+                    </h2>
+                    <p class="text-xs text-slate-400 font-hindi mt-1">प्रत्येक प्रमुख जीवन-स्तंभ में 50 अत्यंत विस्तृत, सूक्ष्म एवं प्रमाणिक भविष्यसूचक वाक्य</p>
+                    <span id="encyclopedia-search-count" class="hidden text-xs text-amber-400 font-bold mt-1 inline-block"></span>
+                </div>
+                <div class="w-full md:w-80">
+                    <input type="text" id="search-encyclopedia" onkeyup="filterEncyclopedia()" placeholder="🔍 1,000 वाक्यों में खोजें (उदा: मुस्कान, बजट, क्रोध, चाय)..." class="w-full px-4 py-2.5 rounded-xl bg-cosmic-800 border border-gold-500/30 text-sm text-white focus:outline-none focus:border-gold-400">
+                </div>
+            </div>
+
+            <div id="encyclopedia-container" class="space-y-6">
+                <!-- Dynamically loaded with all 1,000 sentences via app.js -->
             </div>
         </section>
 
