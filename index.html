@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भीम (Bhim) — वैदिक ज्योतिष एवं भावी जीवनसंगिनी विश्लेषक पोर्टल</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Yantra:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            900: '#070a12',
+                            800: '#0d1322',
+                            700: '#141c33',
+                            600: '#1e294b',
+                        },
+                        gold: {
+                            50: '#fffdf5',
+                            100: '#fef9e8',
+                            400: '#f5cd68',
+                            500: '#e5b338',
+                            600: '#c59424',
+                            700: '#997018',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        hindi: ['Yantra', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at 50% 0%, #151e36 0%, #070a12 100%);
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef9e8 0%, #f5cd68 50%, #c59424 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(13, 19, 34, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(229, 179, 56, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-card:hover {
+            border-color: rgba(229, 179, 56, 0.35);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0d1322;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c59424;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-gold-500 selection:text-black">
+
+    <!-- Top Navigation Header -->
+    <header class="border-b border-gold-500/20 glass-card sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-600 to-amber-300 flex items-center justify-center text-cosmic-900 font-cinzel font-bold text-xl shadow-lg shadow-gold-500/20">
+                    ॐ
+                </div>
+                <div>
+                    <h1 class="font-cinzel text-xl md:text-2xl font-bold tracking-wider gold-gradient-text">
+                        ASTRO-DIVINE AI PORTAL
+                    </h1>
+                    <p class="text-xs text-slate-400 font-hindi">भीम (Bhim) — कुंडली, भावी जीवनसंगिनी एवं वैवाहिक विश्लेषण</p>
+                </div>
+            </div>
+
+            <!-- Tab Buttons -->
+            <nav class="flex flex-wrap items-center gap-2">
+                <button onclick="switchTab('dashboard')" id="btn-dashboard" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gold-500/20 text-gold-400 border border-gold-500/30">
+                    📊 कुंडली चक्र व योग
+                </button>
+                <button onclick="switchTab('nuances')" id="btn-nuances" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
+                    🔬 सूक्ष्म विश्लेषण (Nuances)
+                </button>
+                <button onclick="switchTab('profile160')" id="btn-profile160" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
+                    👰 160-सूत्रीय महा-प्रोफ़ाइल
+                </button>
+                <button onclick="switchTab('timing')" id="btn-timing" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
+                    ⏰ विवाह कालखंड (2027-28)
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+        <!-- ================= TAB 1: KUNDLI DASHBOARD ================= -->
+        <section id="tab-dashboard" class="tab-content block space-y-6">
+            <!-- Hero Summary Banner -->
+            <div class="glass-card rounded-2xl p-6 md:p-8 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-gold-500/5 rounded-full blur-3xl"></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2 space-y-3">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                            ✓ क्लासिकल वैदिक शास्त्र प्रमाणित
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold font-cinzel text-white">
+                            भीम (Bhim) — जन्मकुंडली एवं ग्रह गरिमा
+                        </h2>
+                        <p class="text-sm text-slate-300 leading-relaxed font-hindi">
+                            17 अगस्त 1994, 01:30 PM, पालीगंज (बिहार)। <strong>वृश्चिक लग्न</strong> एवं <strong>धनु राशि</strong> (मूल नक्षत्र पद-4)। दशम भाव में स्वग्रही व नवमांश में उच्च के सूर्य का <strong>बुधादित्य राजयोग</strong>, चतुर्थ में वर्गोत्तम शनि का <strong>शश महापुरुष योग</strong>, और एकादश भाव में शुक्र का <strong>नीचभंग राजयोग</strong>।
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 text-center">
+                        <div class="p-3 rounded-xl bg-cosmic-800/80 border border-gold-500/20">
+                            <span class="text-xs text-slate-400 block font-hindi">लग्न अधिपति</span>
+                            <span class="text-base font-bold text-gold-400 font-cinzel">मंगल (8th)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-800/80 border border-gold-500/20">
+                            <span class="text-xs text-slate-400 block font-hindi">दाराकारक (Wife)</span>
+                            <span class="text-base font-bold text-amber-400 font-cinzel">सूर्य (मेष D9)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-800/80 border border-gold-500/20">
+                            <span class="text-xs text-slate-400 block font-hindi">सप्तम भाव (विवाह)</span>
+                            <span class="text-base font-bold text-gold-400 font-cinzel">वृषभ (शुक्र)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-800/80 border border-gold-500/20">
+                            <span class="text-xs text-slate-400 block font-hindi">वर्तमान दशा</span>
+                            <span class="text-base font-bold text-emerald-400 font-cinzel">चंद्र - शनि</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Planetary Positions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass-card rounded-xl p-4 border-l-4 border-l-amber-500">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-bold text-amber-400">दशम भाव (10th)</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">स्वग्रही + दिग्बली</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mt-1">सूर्य (Sun) 00°24' सिंह</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-hindi">D9 में मेष राशि (परम उच्च)। प्रशासनिक क्षमता, नेतृत्व और असीम राजसम्मान का कारक।</p>
+                </div>
+
+                <div class="glass-card rounded-xl p-4 border-l-4 border-l-blue-500">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-bold text-blue-400">चतुर्थ भाव (4th)</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">शश योग + वर्गोत्तम</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mt-1">शनि (Saturn) 16°22' कुंभ</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-hindi">D9 में कुंभ (वर्गोत्तम)। अचल संपत्ति, भूमि, वाहन, और जीवन में अदम्य सहनशक्ति का दाता।</p>
+                </div>
+
+                <div class="glass-card rounded-xl p-4 border-l-4 border-l-pink-500">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-bold text-pink-400">एकादश भाव (11th)</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-pink-500/20 text-pink-300">नीचभंग राजयोग</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mt-1">शुक्र (Venus) 16°15' कन्या</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-hindi">सप्तमेश 11वें में; D9 में स्वराशि वृषभ। विवाह पश्चात अकूत धन और मनोकामना पूर्ति का योग।</p>
+                </div>
+
+                <div class="glass-card rounded-xl p-4 border-l-4 border-l-emerald-500">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-bold text-emerald-400">द्वितीय भाव (2nd)</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">भाग्येश धन भाव में</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mt-1">चन्द्र (Moon) 10°40' धनु</h3>
+                    <p class="text-xs text-slate-400 mt-2 font-hindi">मूल नक्षत्र। D9 में स्वराशि कर्क। धार्मिकता, कुटुंब सुख, और वाणी के बल पर धनार्जन।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 2: NUANCE-LEVEL DEEP PROFILING ================= -->
+        <section id="tab-nuances" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 border-b border-gold-500/30">
+                <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text">
+                    भावी जीवनसंगिनी का सूक्ष्म मनोवैज्ञानिक एवं व्यावहारिक परीक्षण (Nuance-Level Profiling)
+                </h2>
+                <p class="text-sm text-slate-300 mt-2 font-hindi">
+                    एक समझदार पुरुष अपनी होने वाली पत्नी में बाह्य आकर्षण से परे किन सूक्ष्म पहलुओं का परीक्षण कर सकता है—पारिवारिक संस्कार, बौद्धिक गहराई, दैनिक सूक्ष्म आदतें, अनकहे घाव (Trauma), शौक, पसंद-नापसंद, और आध्यात्मिक दृष्टि का पूर्ण विवरण।
+                </p>
+            </div>
+
+            <!-- Nuance Categories Accordion / Grid -->
+            <div class="space-y-4">
+
+                <!-- 1. Family Background & Dynastic DNA -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">🏛️</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">1. पारिवारिक पृष्ठभूमि, कुल-संस्कार एवं माता-पिता का संबंध (Family Background & Pedigree)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: उपपद लग्न (UL) सिंह राशि, स्वामी सूर्य स्वग्रही, द्वितीय में शुक्र</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• माता-पिता के बीच आपसी समीकरण:</strong> उनके घर में माता-पिता के मध्य एक गहरा सम्मान और औपचारिक संतुलन होगा। पिता समाज में सम्मानित, नीतिवान या शासकीय/प्रशासनिक पद पर होंगे, जबकि माता परिवार की नैतिक रीढ़ होंगी।</p>
+                        <p><strong>• घर का वातावरण:</strong> उनके मायके में समयबद्धता, नियमों का आदर और बड़ों के प्रति मर्यादा को बहुत गंभीरता से लिया जाता रहा होगा। वहाँ बात-बात पर चीखने-चिल्लाने या अनुशासनहीनता की संस्कृति नहीं होगी।</p>
+                        <p><strong>• वित्तीय ईमानदारी का डीएनए:</strong> परिवार में पीढ़ियों से ईमानदारी और परिश्रम की कमाई का सम्मान रहा होगा। भ्रष्ट या शॉर्टकट से आए धन को उनके कुल में कभी प्रतिष्ठा नहीं मिली होगी।</p>
+                    </div>
+                </div>
+
+                <!-- 2. Education, Pedigree & Intellectual Caliber -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">🎓</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">2. शिक्षा, बौद्धिक स्तर एवं विश्लेषणात्मक क्षमता (Education & Intellectual Caliber)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: सप्तमेश शुक्र का कन्या (बुध) राशि में होना, नवमांश में बुध-शुक्र युति</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• शैक्षणिक पृष्ठभूमि:</strong> वे केवल साधारण ग्रेजुएट नहीं होंगी; उनके पास वित्त (Finance/CA), बैंकिंग, कंप्यूटर साइंस/आईटी, कानून या उच्च प्रबंधन (MBA/Analytics) जैसी तार्किक व व्यावहारिक डिग्री होगी।</p>
+                        <p><strong>• बौद्धिक स्तर:</strong> उनकी सोच डेटा और तथ्यों पर आधारित होगी। वे सतही बहस में नहीं उलझेंगी; जब भी बोलेंगी, उनके पास तर्क और समाधान दोनों तैयार होंगे।</p>
+                        <p><strong>• सीखने की सतत ललक:</strong> विवाह के बाद भी वे नई तकनीक, नई किताबें और पेशेवर सर्टिफिकेशन्स करना जारी रखेंगी।</p>
+                    </div>
+                </div>
+
+                <!-- 3. Daily Behavior & Micro-Manners -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">☕</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">3. दैनिक आचरण, सूक्ष्म आदतें एवं टेबल मैनर्स (Daily Demeanor & Micro-Manners)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: वृषभ (सप्तम भाव - पृथ्वी तत्व) + कन्या में शुक्र</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• सेवाकर्मियों और होटल स्टाफ से व्यवहार:</strong> रेस्तरां के वेटर, घर के ड्राइवर या सफाईकर्मी से उनका व्यवहार अत्यंत शालीन और आदरयुक्त होगा। वे कभी दूसरों को नीचा दिखाकर अपना रुतबा नहीं दिखाएंगी।</p>
+                        <p><strong>• टेबल मैनर्स एवं खान-पान:</strong> भोजन करते समय प्लेट में खाना छोड़ना उन्हें पसंद नहीं होगा। कांटे-चम्मच और नैपकिन का उपयोग अत्यंत सलीके से करेंगी। भोजन धीरे-धीरे और चबाकर करेंगी।</p>
+                        <p><strong>• उठने-बैठने का शिष्टाचार:</strong> सार्वजनिक स्थान पर पैरों को फैलाकर या असंतुलित होकर नहीं बैठेंगी। उनकी मुद्रा सदैव अनुशासित, सतर्क और शांत रहेगी।</p>
+                    </div>
+                </div>
+
+                <!-- 4. Hobbies, Aesthetic Tastes & Leisure -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">🎨</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">4. शौक, कलात्मक रुचि एवं सप्ताहांत की प्राथमिकताएं (Hobbies & Leisure)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: शुक्र (कला, संगीत) और बुध (पुस्तकालय, लेखन)</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• खाली समय का सदुपयोग:</strong> वे घंटों रील्स देखकर समय बर्बाद नहीं करेंगी। सप्ताहांत में वे अच्छी किताबें पढ़ना, घर के इंटीरियर को नया लुक देना, बागवानी या कोई शास्त्रीय संगीत सुनना पसंद करेंगी।</p>
+                        <p><strong>• यात्रा की पसंद:</strong> वे शोरगुल वाले पब या क्लब के बजाय ऐतिहासिक धरोहरों, शांत हिल-स्टेशनों, पवित्र तीर्थस्थलों या प्राकृतिक अभयारण्यों में समय बिताना पसंद करेंगी।</p>
+                        <p><strong>• रचनात्मक अभिव्यक्ति:</strong> डायरी लेखन, कुकिंग में नई हेल्दी रेसिपीज का प्रयोग, या सुलेख (Calligraphy/Painting) में उनकी सहज रुचि होगी।</p>
+                    </div>
+                </div>
+
+                <!-- 5. Likes, Dislikes & Pet Peeves -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">⚖️</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">5. पसंद-नापसंद, असहजताएं एवं रेड फ्लैग्स (Likes, Dislikes & Red Flags)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: कन्या राशि का शुचिता स्वभाव व सूर्य का सत्यवादी प्रभाव</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• क्या सबसे ज्यादा पसंद है:</strong> समय की पाबंदी, स्पष्ट संवाद, स्वच्छता, किताबों की खुशबू, और शांत वातावरण।</p>
+                        <p><strong>• क्या सख्त नापसंद है (Pet Peeves):</strong> झूठ बोलना, बात-बात पर बहाने बनाना, कमरे में कपड़े फैलाना, और दूसरों की पीठ पीछे चुगलखोरी करना।</p>
+                        <p><strong>• उनके लिए सबसे बड़ा रेड फ्लैग:</strong> यदि कोई व्यक्ति उनके स्वाभिमान पर चोट करे या उनसे कोई बात छुपाकर विश्वासघात करे, तो वे उसे कभी दूसरा मौका नहीं देंगी।</p>
+                    </div>
+                </div>
+
+                <!-- 6. Psychological Vulnerabilities & Hidden Trauma -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">🛡️</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">6. आंतरिक असुरक्षाएं, अनकहे घाव एवं ट्रिगर्स (Hidden Trauma & Emotional Scars)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: कन्या में शुक्र का नीचत्व एवं अष्टमस्थ मंगल का सूक्ष्म प्रभाव</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• परफेक्शन का बोझ (Perfectionism Burnout):**</strong> बचपन से ही परिवार में 'सर्वश्रेष्ठ प्रदर्शन' करने के दबाव के कारण वे कभी-कभी खुद पर बहुत कठोर हो जाती हैं। जब कोई काम 100% सही नहीं होता, तो वे आंतरिक रूप से अत्यधिक बेचैन हो जाती हैं।</p>
+                        <p><strong>• स्वतंत्रता खोने का डर:**</strong> उन्हें इस बात का गहरा डर हो सकता है कि विवाह के बाद कहीं उनका करियर, उनकी पहचान या उनकी स्वायत्तता छिन न जाए। भीम का उन्हें यह भरोसा दिलाना कि 'तुम्हारा करियर मेरी भी प्राथमिकता है' उनके सारे डर समाप्त कर देगा।</p>
+                        <p><strong>• भावनात्मक रूप से बंद होना (Defensive Walls):**</strong> जब उन्हें बहुत गहरी चोट लगेगी, तो वे चिल्लाएंगी नहीं; वे अपने भीतर एक भावनात्मक दीवार खड़ी कर लेंगी। उस समय उन्हें जबरन कुरेदने के बजाय आत्मीय मौन देना आवश्यक होगा।</p>
+                    </div>
+                </div>
+
+                <!-- 7. Spiritual Inclination & Dharma -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">🪔</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">7. आध्यात्मिक झुकाव, साधना एवं धर्म-बोध (Spiritual Compass & Dharma)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: पंचमेश गुरु का प्रभाव एवं सूर्य की सात्विक किरणें</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• आंतरिक साधना:</strong> वे घंटों अगरबत्ती सुलगाने या अंधविश्वास में समय गंवाने के बजाय 15-20 मिनट का प्राणायाम, मंत्र जप और एकाग्र ध्यान पसंद करेंगी।</p>
+                        <p><strong>• कर्म को ही धर्म मानना:</strong> गीता के 'कर्मण्येवाधिकारस्ते' के सिद्धांत पर चलना। अपनी गृहस्थी और पेशे को ही अपनी वास्तविक पूजा समझना।</p>
+                        <p><strong>• तीर्थ यात्राओं में सादगी:</strong> बड़े-बड़े VIP पास के दिखावे के बजाय मंदिर के किसी शांत कोने में बैठकर ईश्वर के साथ एकाकार होना।</p>
+                    </div>
+                </div>
+
+                <!-- 8. Growth Mindset, Ambition & Generational Legacy -->
+                <div class="glass-card rounded-xl p-6 transition-all duration-200">
+                    <div class="flex items-center gap-3 border-b border-slate-700/60 pb-3 mb-4">
+                        <span class="text-2xl">🌱</span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gold-400 font-cinzel">8. विकासोन्मुखी सोच, महत्वाकांक्षा एवं भावी पीढ़ी (Growth Mindset & Legacy)</h3>
+                            <span class="text-xs text-slate-400 font-hindi">ज्योतिषीय आधार: 11वें भाव में शुक्र और पंचम नवमांश में उच्च का सूर्य</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300 font-hindi leading-relaxed">
+                        <p><strong>• असफलताओं पर दृष्टिकोण:</strong> असफलता मिलने पर वे किसी को दोष नहीं देंगी; वे कहेंगी—"हमने यहाँ गलती की, अगली बार इस रणनीति से काम करेंगे।"</p>
+                        <p><strong>• भीम के लिए उत्प्रेरक:</strong> वे भीम को कभी जीवन में संतुष्ट होकर बैठने नहीं देंगी; जब भीम किसी मुकाम पर पहुंचेंगे, वे अगला विराट लक्ष्य सामने रख देंगी।</p>
+                        <p><strong>• बच्चों के लिए विरासत:</strong> वे बच्चों को सिर्फ बैंक बैलेंस नहीं, बल्कि एक ऐसा चरित्र और मानसिकता सौंपना चाहेंगी जो किसी भी विपरीत परिस्थिति में दुनिया को जीत सके।</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: 160-POINT MASTER PROFILE ================= -->
+        <section id="tab-profile160" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text">
+                        संपूर्ण 160-सूत्रीय मास्टर प्रोफ़ाइल (Full 160 Master Points)
+                    </h2>
+                    <p class="text-xs text-slate-400 font-hindi mt-1">8 प्रमुख आयामों में प्रत्येक के 20-20 विस्तृत बिंदु व शास्त्रीय फलित</p>
+                </div>
+                <div class="w-full md:w-72">
+                    <input type="text" id="search160" onkeyup="filter160Points()" placeholder="🔍 किसी भी बिंदु को खोजें..." class="w-full px-4 py-2 rounded-lg bg-cosmic-800 border border-gold-500/30 text-sm text-white focus:outline-none focus:border-gold-400">
+                </div>
+            </div>
+
+            <div id="points-container" class="space-y-4">
+                <!-- Dynamically loaded or fully listed cards via app.js -->
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: TIMING & TRANSITS ================= -->
+        <section id="tab-timing" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+                <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text">
+                    विवाह का निश्चित स्वर्णिम कालखंड (Golden Marriage Timing Window)
+                </h2>
+                <p class="text-sm text-slate-300 mt-2 font-hindi">
+                    विंशोत्तरी दशा पद्धति, जैमिनि चर दशा एवं देवगुरु बृहस्पति और शनिदेव के डबल-ट्रांजिट (Double Transit) का गणितीय समन्वय।
+                </p>
+
+                <!-- Visual Timeline -->
+                <div class="mt-8 relative border-l-2 border-gold-500/40 ml-4 md:ml-8 pl-6 space-y-8">
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-cosmic-900 border-2 border-gold-400"></div>
+                        <span class="text-xs font-bold text-amber-400 px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 font-cinzel">देर 2026 – मध्य 2027</span>
+                        <h3 class="text-lg font-bold text-white mt-1">प्रस्ताव एवं औपचारिक वार्ताओं का शुभारंभ</h3>
+                        <p class="text-xs text-slate-300 mt-1 font-hindi">देवगुरु बृहस्पति का सिंह राशि (उपपद लग्न - 10th भाव) में गोचर। इस दौरान प्रतिष्ठित रिश्ते आने और पारिवारिक बातचीत गंभीर स्तर पर पहुंचने के प्रबल योग हैं।</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50"></div>
+                        <span class="text-xs font-bold text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 font-cinzel">नवंबर 2027 – मध्य 2028 (PEAK GOLDEN WINDOW)</span>
+                        <h3 class="text-xl font-bold text-emerald-300 mt-1">विवाह संस्कार संपन्न होने का सर्वोत्कृष्ट समय</h3>
+                        <p class="text-xs text-slate-200 mt-1 font-hindi">
+                            <strong>दशा:</strong> चंद्रमा में बुध की अंतर्दशा (Moon - Mercury)। बुध सप्तमेश शुक्र का राशिपति है तथा नवमांश में सप्तम का स्वामी होकर शुक्र के साथ बैठा है।<br>
+                            <strong>गोचर:</strong> देवगुरु बृहस्पति कन्या राशि (सप्तमेश शुक्र पर) से सीधे 9वीं अमृत दृष्टि से सप्तम भाव (वृषभ) को सिंचित करेंगे। यह परिणय सूत्र में बंधने का अकाट्य स्वर्णिम कालखंड है।
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-cosmic-900 border-2 border-slate-500"></div>
+                        <span class="text-xs font-bold text-slate-400 px-2 py-0.5 rounded bg-slate-500/10 font-cinzel">दिशा एवं दूरी (Direction)</span>
+                        <h3 class="text-base font-bold text-white mt-1">दक्षिण-पश्चिम (South-West) अथवा पश्चिम दिशा</h3>
+                        <p class="text-xs text-slate-300 mt-1 font-hindi">सप्तम भाव वृषभ एवं सप्तमेश शुक्र की कन्या राशि के अनुसार, जीवनसंगिनी का मूल स्थान भीम के जन्मस्थान पालीगंज से दक्षिण-पश्चिम या पश्चिम दिशा की ओर होने के सर्वाधिक संकेत हैं।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gold-500/20 py-6 text-center text-xs text-slate-500 font-hindi glass-card mt-12">
+        <p>वैदिक ज्योतिष शोध एवं विश्लेषण पोर्टल — महर्षि पराशर, आचार्य वराहमिहिर, मंत्रेश्वर एवं महर्षि जैमिनि के मूल सिद्धांतों पर आधारित।</p>
+        <p class="mt-1 text-slate-600">Private Repository: anshuk-dev/astroapp-prediction-rag | All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
