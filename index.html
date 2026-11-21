@@ -91,10 +91,10 @@
                     📊 कुंडली चक्र व योग
                 </button>
                 <button onclick="switchTab('nuances')" id="btn-nuances" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
-                    🔬 सूक्ष्म विश्लेषण (Nuances)
+                    🔬 सूक्ष्म आयाम (10 Dimensions)
                 </button>
                 <button onclick="switchTab('profile160')" id="btn-profile160" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
-                    👰 160-सूत्रीय महा-प्रोफ़ाइल
+                    👰 500-सूत्रीय महा-प्रोफ़ाइल (500 Qualities)
                 </button>
                 <button onclick="switchTab('timing')" id="btn-timing" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     ⏰ विवाह कालखंड (2027-28)
@@ -329,17 +329,18 @@
             </div>
         </section>
 
-        <!-- ================= TAB 3: 160-POINT MASTER PROFILE ================= -->
+        <!-- ================= TAB 3: 500-POINT PREDICTIVE PROFILE ================= -->
         <section id="tab-profile160" class="tab-content hidden space-y-6">
             <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                     <h2 class="text-2xl font-bold font-cinzel text-white gold-gradient-text">
-                        संपूर्ण 160-सूत्रीय मास्टर प्रोफ़ाइल (Full 160 Master Points)
+                        भावी जीवनसंगिनी की 500 सूक्ष्म विशेषताएं एवं गुण (Full 500 Predicted Qualities)
                     </h2>
-                    <p class="text-xs text-slate-400 font-hindi mt-1">8 प्रमुख आयामों में प्रत्येक के 20-20 विस्तृत बिंदु व शास्त्रीय फलित</p>
+                    <p class="text-xs text-slate-400 font-hindi mt-1">20 प्रमुख जीवन खंडों में प्रत्येक के 25-25 सूक्ष्म भविष्यसूचक गुण, स्वभाव एवं शास्त्रीय फलित</p>
+                    <span id="search-count" class="hidden text-xs text-amber-400 font-bold mt-1 inline-block"></span>
                 </div>
-                <div class="w-full md:w-72">
-                    <input type="text" id="search160" onkeyup="filter160Points()" placeholder="🔍 किसी भी बिंदु को खोजें..." class="w-full px-4 py-2 rounded-lg bg-cosmic-800 border border-gold-500/30 text-sm text-white focus:outline-none focus:border-gold-400">
+                <div class="w-full md:w-80">
+                    <input type="text" id="search160" onkeyup="filter160Points()" placeholder="🔍 500 गुणों में खोजें (उदा: मुस्कान, क्रोध, खर्च, सौंदर्य)..." class="w-full px-4 py-2.5 rounded-xl bg-cosmic-800 border border-gold-500/30 text-sm text-white focus:outline-none focus:border-gold-400">
                 </div>
             </div>
 
@@ -387,6 +388,7 @@
             </div>
         </section>
 
+    
     </main>
 
     <!-- Footer -->
