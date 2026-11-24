@@ -27,6 +27,14 @@ function switchTab(tabId) {
         }
         activeBtn.classList.remove('text-slate-400');
     }
+
+    // Dynamic rendering on tab switch to ensure content is always visible
+    if (tabId === 'bhim-encyclopedia') {
+        renderBhimPillarButtons();
+        selectBhimPillar(activeBhimPillarId);
+    } else if (tabId === 'bhim-qualities') {
+        renderBhim500DirectList();
+    }
 }
 
 // ================= DATASETS =================
@@ -69,7 +77,7 @@ function selectBhimPillar(pillarId) {
 }
 
 function renderBhimPillarSentences(pillar) {
-    const container = document.getElementById('bhim-pillar-content');
+    const container = document.getElementById('bhim-pillar-content') || document.getElementById('bhim-pillar-content-display');
     if (!container) return;
 
     let html = `
@@ -77,7 +85,7 @@ function renderBhimPillarSentences(pillar) {
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 border-b border-amber-500/20 pb-4">
                 <div>
                     <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-semibold border border-amber-500/30">
-                        भीम स्तंभ ${pillar.id} / 20
+                        भीम व्यक्तित्व स्तंभ ${pillar.id} / 20
                     </span>
                     <h3 class="text-xl font-bold text-white font-cinzel mt-2">${pillar.title}</h3>
                     <p class="text-xs text-amber-300/80 font-hindi mt-1"><strong>ज्योतिषीय आधार:</strong> ${pillar.astro_basis}</p>
