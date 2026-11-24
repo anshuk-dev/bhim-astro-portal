@@ -102,6 +102,9 @@
                 <button onclick="switchTab('wife-qualities')" id="btn-wife-qualities" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     🌸 जीवनसंगिनी: 500 गुण प्रत्यक्ष सूची
                 </button>
+                <button onclick="switchTab('romantic')" id="btn-romantic" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-pink-400 hover:bg-pink-500/10">
+                    💖 दांपत्य व कामुक जीवन: 200 सूत्र
+                </button>
                 <button onclick="switchTab('nuances')" id="btn-nuances" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-gold-400 hover:bg-gold-500/10">
                     🔬 सूक्ष्म आयाम
                 </button>
@@ -469,6 +472,48 @@
 
             <div id="wife-points-container" class="space-y-4">
                 <!-- Dynamically loaded directly via app.js -->
+            </div>
+        </section>
+
+        <!-- ================= TAB: 200-POINT ROMANTIC & INTIMATE PROFILE ================= -->
+        <section id="tab-romantic" class="tab-content hidden space-y-6">
+            <!-- Hero Banner -->
+            <div class="glass-card rounded-2xl p-6 md:p-8 relative overflow-hidden border border-pink-500/30">
+                <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl"></div>
+                <div class="space-y-3 relative z-10">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pink-500/10 text-pink-300 border border-pink-500/20 font-hindi">
+                            💖 कामशास्त्र, दांपत्य मनोविज्ञान एवं सनातन शुचिता
+                        </span>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-hindi">
+                            ✓ 200 अद्वितीय सूत्र • 9 जीवन-पड़ाव
+                        </span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-cinzel text-white">
+                        भीम की होने वाली अर्धांगिनी का 200-सूत्रीय दांपत्य, कामुक व अंतरंग जीवन प्रोफाइल
+                    </h2>
+                    <p class="text-sm text-slate-300 leading-relaxed font-hindi max-w-4xl">
+                        नव-परिणय की प्रथम रात्रि से लेकर जीवन के अंतिम पड़ाव (Life Ke Last Time Tak) तक—वैवाहिक रति-विलास, काम-कला, गर्भावस्था, मातृत्व संतुलन, यौवन का परिपक्व दांपत्य, संकटों में शारीरिक संबल, प्रौढ़ावस्था का शांत ध्यान व वृद्धावस्था का मोक्षमयी एकाकार। प्रत्येक सूत्र एक विस्तृत, गहरा व प्रामाणिक मनोवैज्ञानिक गद्यांश है।
+                    </p>
+                </div>
+            </div>
+
+            <!-- Phase Pills Selector -->
+            <div class="space-y-2">
+                <span class="text-xs text-slate-400 font-hindi block font-semibold">जीवन-पड़ाव चयन करें (Select Life Phase):</span>
+                <div id="romantic-phase-pills-container" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+                    <!-- Loaded dynamically via app.js -->
+                </div>
+            </div>
+
+            <!-- Active Phase Summary Banner -->
+            <div id="romantic-phase-banner" class="glass-card rounded-2xl p-5 border border-pink-500/20">
+                <!-- Loaded dynamically via app.js -->
+            </div>
+
+            <!-- Direct Cards Listing Container -->
+            <div id="romantic-points-container" class="space-y-4">
+                <!-- Loaded dynamically via app.js -->
             </div>
         </section>
 
